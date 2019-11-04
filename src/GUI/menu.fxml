@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<BorderPane id="menu" xmlns:fx="header">
+
+    <top>
+
+        <VBox id="header-section">
+
+            <Label id="header-text" text="Dogsheep Beta"/>
+
+            <Label id = "credits" text="Created by Andy Li"/>
+        </VBox>
+
+    </top>
+
+    <left>
+        <TabPane side="LEFT" rotateGraphic="true" >
+            <tabs>
+                <Tab styleClass = "tabs" closable="false" >
+                    <graphic>
+                        <Group>
+                            <Label text="Introduction" rotate="90" styleClass = "tabLabels"/>
+                        </Group>
+                    </graphic>
+
+                    <VBox id="intro">
+                        <Label id = "intro-title" text="Dogsheep Beta - Inspired by Wolfram Alpha"/>
+                        <Label styleClass = "intro-title2" text="About"/>
+                        <Label styleClass = "description" text="Version: Beta (will forever be beta)"/>
+                        <Label styleClass = "description" text="Created: Nov. 4, 2019 by Andy Li"/>
+                        <Label styleClass = "description" text="Environments: Win10 (Run elsewhere at your own loss)"/>
+                        <Label styleClass = "description" text="License: Public"/>
+                        <Label styleClass = "intro-title2" text="Changelog"/>
+                        <TextArea wrapText = "true" id="changelog" editable = "false" text="-11/3/19 Created main application                                                                                                                                                                                                    -11/4/19 Added tabs, introduction, CSS stylesheet "/>
+                    </VBox>
+
+                </Tab>
+
+                <Tab styleClass = "tabs" closable="false" >
+                    <graphic>
+                        <Group>
+                            <Label text="Quadratic Calculator" rotate="90" styleClass = "tabLabels"/>
+                        </Group>
+                    </graphic>
+
+
+                </Tab>
+
+                <Tab styleClass = "tabs" closable="false" >
+                    <graphic>
+                        <Group>
+                            <Label text="Fibonacci Generator" rotate="90" styleClass = "tabLabels"/>
+                        </Group>
+                    </graphic>
+
+
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </left>
+
+
+    <stylesheets>
+        <URL value="@menu.css" />
+    </stylesheets>
+</BorderPane>
