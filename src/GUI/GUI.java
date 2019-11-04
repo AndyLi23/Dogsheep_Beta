@@ -14,7 +14,7 @@ public class GUI extends Application{
     public void start(Stage stage) throws Exception {
         stage.setTitle("Dogsheep Beta");
         stage.setWidth(1540);
-        stage.setHeight(860);
+        stage.setHeight(840);
         stage.setMaximized(true);
 
         Parent header = FXMLLoader.load(getClass().getResource("menu.fxml"));
