@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.*?>
 
 <?import java.net.URL?>
-<BorderPane id="menu" xmlns:fx="header">
+<?import javafx.scene.text.Text?>
+<BorderPane id="menu" xmlns:fx="header" fx:controller="GUI.controller">
 
     <top>
 
@@ -51,6 +52,9 @@
                     </graphic>
                     <VBox styleClass="tabVBox">
                         <Label styleClass="tabtitle" text="Quadratic Calculator"/>
+                        <TextField fx:id = "quadCalcNums"/>
+                        <Button text="Calculate" styleClass="enterButton" onAction = "#quadCalc"/>
+                        <Text fx:id = "result"/>
                     </VBox>
 
                 </Tab>
