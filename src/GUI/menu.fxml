@@ -30,8 +30,8 @@
                         </Group>
                     </graphic>
 
-                    <VBox id="intro">
-                        <Label id = "intro-title" text="Dogsheep Beta - Inspired by Wolfram Alpha"/>
+                    <VBox styleClass="tabVBox">
+                        <Label styleClass = "tabtitle" text="Dogsheep Beta - Inspired by Wolfram Alpha"/>
                         <Label styleClass = "intro-title2" text="About"/>
                         <Label styleClass = "description" text="Version: Beta (will forever be beta)"/>
                         <Label styleClass = "description" text="Created: Nov. 4, 2019 by Andy Li"/>
@@ -49,7 +49,9 @@
                             <Label text="Quadratic Calculator" rotate="90" styleClass = "tabLabels"/>
                         </Group>
                     </graphic>
-
+                    <VBox styleClass="tabVBox">
+                        <Label styleClass="tabtitle" text="Quadratic Calculator"/>
+                    </VBox>
 
                 </Tab>
 
@@ -59,7 +61,9 @@
                             <Label text="Fibonacci Generator" rotate="90" styleClass = "tabLabels"/>
                         </Group>
                     </graphic>
-
+                    <VBox styleClass="tabVBox">
+                        <Label styleClass="tabtitle" text="Fibonacci Generator"/>
+                    </VBox>
 
                 </Tab>
 

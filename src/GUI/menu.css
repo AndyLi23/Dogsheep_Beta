@@ -59,13 +59,13 @@
     -fx-font-size: 20;
 }
 
-#intro {
+.tabVBox {
     -fx-pref-width: 1140;
     -fx-padding: 20;
     -fx-background-color: white;
 }
 
-#intro-title {
+.tabtitle {
     -fx-font-size: 20;
     -fx-background-color: transparent;
     -fx-background-radius: 8;
