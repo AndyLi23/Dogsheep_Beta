@@ -8,7 +8,9 @@ import javafx.stage.Stage;
 
 
 public class GUI extends Application{
-    public GUI() {}
+    public GUI() {
+        System.out.println("Starting Application");
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
