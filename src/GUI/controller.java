@@ -8,10 +8,16 @@ import javafx.scene.text.Text;
 import java.util.ArrayList;
 
 public class controller {
+    //quad calc
     @FXML public Text quadCalcResult;
     @FXML public TextField aText;
     @FXML public TextField bText;
     @FXML public TextField cText;
+
+    //fib gen
+    @FXML public Text fibGenResult;
+    @FXML public TextField fibInput;
+
     @FXML public void quadCalc() {
         double a = Double.parseDouble(aText.getText());
         double b = Double.parseDouble(bText.getText());
@@ -23,5 +29,9 @@ public class controller {
         QuadCalc quadCalc = new QuadCalc();
         String ans = quadCalc.calculate(vals);
         quadCalcResult.setText(ans);
+    }
+
+    @FXML public void fibGen() {
+
     }
 }

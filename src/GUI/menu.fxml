@@ -53,9 +53,9 @@
                     <VBox styleClass="tabVBox">
                         <Label styleClass="tabtitle" text="Quadratic Calculator"/>
                         <TextField styleClass = "quadCalcInput" fx:id = "aText" maxWidth = "50" translateY = "20" translateX = "20"/>
-                        <Label styleClass = "quadCalcText" text = "x²+" translateX = "77" translateY = "-2"/>
+                        <Label styleClass = "funcText" text = "x²+" translateX = "77" translateY = "-2"/>
                         <TextField styleClass = "quadCalcInput" fx:id = "bText" maxWidth = "50" translateX = "110" translateY = "-22"/>
-                        <Label styleClass = "quadCalcText" text = "x+" translateX = "168" translateY = "-42"/>
+                        <Label styleClass = "funcText" text = "x+" translateX = "168" translateY = "-42"/>
                         <TextField styleClass = "quadCalcInput" fx:id = "cText" maxWidth = "50" translateX ="193" translateY = "-63"/>
                         <Button text="Calculate" styleClass="enterButton" onAction = "#quadCalc" translateY = "-50" translateX = "20"/>
                         <Text fx:id = "quadCalcResult" translateX = "20" translateY = "-30"/>
@@ -71,6 +71,10 @@
                     </graphic>
                     <VBox styleClass="tabVBox">
                         <Label styleClass="tabtitle" text="Fibonacci Generator"/>
+                        <Label styleClass = "funcText" text = "Generate to # " translateX = "20"/>
+                        <TextField fx:id = "fibInput" maxWidth = "200" translateX ="20"/>
+                        <Button text="Calculate" styleClass="enterButton" onAction = "#fibGen" translateY = "-50" translateX = "20"/>
+                        <Text fx:id = "fibGenResult" translateX = "20" translateY = "-30"/>
                     </VBox>
 
                 </Tab>
