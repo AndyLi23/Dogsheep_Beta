@@ -1,5 +1,6 @@
 package Functions;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class QuadCalc {
@@ -42,11 +43,14 @@ public class QuadCalc {
 
     public double[] gcf(double num1, double num2, double num3) {
         int gcf = 1;
-        num1 = Math.abs(num1);
-        num2 = Math.abs(num2);
-        num3 = Math.abs(num3);
-        for (int i = 1; i < num1+1; i++) {
-            if(num1%i == 0 && num2%i == 0 && num3%i == 0) {
+        int num1test = (int)Math.abs(num1);
+        int num2test = (int)Math.abs(num2);
+        int num3test = (int)Math.abs(num3);
+        if(num1test % 2 == 0 && num2test % 2 == 0 && num3test % 2 == 0) {
+            gcf = 2;
+        }
+        for (int i = 1; i <= num1; i++) {
+            if(num1test % i == 0 && num2test % i == 0 && num3test % i == 0) {
                 gcf = Math.max(gcf, i);
             }
         }
@@ -69,17 +73,17 @@ public class QuadCalc {
         }
         double[] e = new double[2];
         if ((int)(coef[1]*coef[1])-4*coef[0]*coef[2] != (coef[1]*coef[1])-4*coef[0]*coef[2]) {
-            e[0] = 1 ;
             e[1] = (coef[1]*coef[1])-4*coef[0]*coef[2];
+            return "(" + (-coef[1]) + "±√" + (e[1]) + ")/" + (2*coef[0]);
         } else {
             e = simroot((int)((coef[1]*coef[1])-4*coef[0]*coef[2]));
         }
-        double[] g = gcf(coef[1],e[0],-2*coef[0]);
+        double[] g = gcf(-1*coef[1],e[0],2*coef[0]);
 
-        if (g[1] == 1 || g[1] == 0) {
-            return "(" + (int)(g[0] * -1) + "±√" + (int)(e[1]) + ")/" + (int)(2 * g[2]);
+        if (g[1] == 1 || g[1] == -1) {
+            return "(" + (int)(g[0]) + "±√" + (int)(e[1]) + ")/" + (int)(g[2]);
         } else {
-            return "(" + (int)(g[0] * -1) + "±" + (int)(g[1]) + "√" + (int)(e[1]) + ")/" + (int)(2 * g[2]);
+            return "(" + (int)(g[0]) + "±" + (int)(g[1]) + "√" + (int)(e[1]) + ")/" + (int)(g[2]);
         }
 
     }

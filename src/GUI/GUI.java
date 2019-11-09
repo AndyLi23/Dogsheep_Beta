@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class GUI extends Application{
     public GUI() {
-        System.out.println("Starting Application");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~\nStarting Application\n~~~~~~~~~~~~~~~~~~~~");
     }
 
     @Override
