@@ -1,10 +1,14 @@
 package GUI;
 
+import Functions.FibGen;
 import Functions.QuadCalc;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class controller {
@@ -15,7 +19,7 @@ public class controller {
     @FXML public TextField cText;
 
     //fib gen
-    @FXML public Text fibGenResult;
+    @FXML public TextArea fibGenResult;
     @FXML public TextField fibInput;
 
     @FXML public void quadCalc() {
@@ -32,6 +36,16 @@ public class controller {
     }
 
     @FXML public void fibGen() {
+        int a = Integer.parseInt(fibInput.getText());
+        FibGen fibGen = new FibGen();
+        String ans = fibGen.generateFib(a);
+        fibGenResult.setText(ans);
+    }
 
+    @FXML public void fibGenList() {
+        double a = Double.parseDouble(fibInput.getText());
+        FibGen fibGen = new FibGen();
+        BigInteger ans = fibGen.getFib(a);
+        fibGenResult.setText(""+ans);
     }
 }

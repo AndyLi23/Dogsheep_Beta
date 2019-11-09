@@ -69,13 +69,16 @@
                             <Label text="Fibonacci Generator" rotate="90" styleClass = "tabLabels"/>
                         </Group>
                     </graphic>
-                    <VBox styleClass="tabVBox">
+                    <ScrollPane fitToWidth = "true">
+                    <VBox styleClass="tabVBox" fx:id = "fibGenVBox">
                         <Label styleClass="tabtitle" text="Fibonacci Generator"/>
                         <Label styleClass = "funcText" text = "Generate to # " translateX = "20"/>
                         <TextField fx:id = "fibInput" maxWidth = "200" translateX ="20"/>
-                        <Button text="Calculate" styleClass="enterButton" onAction = "#fibGen" translateY = "-50" translateX = "20"/>
-                        <Text fx:id = "fibGenResult" translateX = "20" translateY = "-30"/>
+                        <Button text="Calculate" styleClass="enterButton" onAction = "#fibGenList" translateY = "0" translateX = "20"/>
+                        <Button text="List" styleClass="enterButton" onAction = "#fibGen" translateY = "0" translateX = "20"/>
+                        <TextArea id = "figGenResult"/>
                     </VBox>
+                    </ScrollPane>
 
                 </Tab>
 
