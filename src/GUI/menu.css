@@ -21,7 +21,7 @@
 }
 
 #menu {
-    -fx-background-color:linear-gradient(from 0% 50% to 100% 50%, #dadada ,#fcfcfc);
+    -fx-background-color:linear-gradient(from 0% 0% to 50% 100%, #dadada ,#fcfcfc);
 }
 
 .tabs {
@@ -105,4 +105,12 @@
     -fx-padding: 10px;
     -fx-text-fill: gray;
     -fx-highlight-fill: #7ecfff;
+}
+
+.quadCalcText {
+    -fx-font-size: 14;
+}
+
+#quadCalcResult {
+    -fx-font-size: 16;
 }
