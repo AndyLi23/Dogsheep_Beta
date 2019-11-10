@@ -7,7 +7,6 @@
 }
 
 
-
 #header-text {
     -fx-font-family: "Verdana";
     -fx-font-size: 30;
@@ -113,4 +112,10 @@
 
 #quadCalcResult {
     -fx-font-size: 16;
+}
+
+#fibGenResult {
+    -fx-font-size: 14;
+    -fx-max-width: 1000;
+
 }

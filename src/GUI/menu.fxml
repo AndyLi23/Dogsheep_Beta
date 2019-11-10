@@ -38,8 +38,8 @@
                         <Label styleClass = "description" text="Created: Nov. 4, 2019 by Andy Li"/>
                         <Label styleClass = "description" text="Environments: Win10 (Run elsewhere at your own loss)"/>
                         <Label styleClass = "description" text="License: Public"/>
-                        <Label styleClass = "intro-title2" text="Changelog"/>
-                        <TextArea wrapText = "true" id="changelog" editable = "false" text="-11/3/19 Created main application                                                                                                                                                                                                    -11/4/19 Added tabs, introduction, CSS stylesheet "/>
+                        <Label fx:id = "changelogUpdater" styleClass = "intro-title2" text="Show Changelog" onMouseClicked = "#showChangelog"/>
+                        <TextArea wrapText = "true" fx:id="changelog" editable = "false"/>
                     </VBox>
 
                 </Tab>
@@ -58,7 +58,7 @@
                         <Label styleClass = "funcText" text = "x+" translateX = "168" translateY = "-42"/>
                         <TextField styleClass = "quadCalcInput" fx:id = "cText" maxWidth = "50" translateX ="193" translateY = "-63"/>
                         <Button text="Calculate" styleClass="enterButton" onAction = "#quadCalc" translateY = "-50" translateX = "20"/>
-                        <Text fx:id = "quadCalcResult" translateX = "20" translateY = "-30"/>
+                        <TextArea fx:id = "quadCalcResult" translateX = "20" translateY = "-30"/>
                     </VBox>
 
                 </Tab>
@@ -69,19 +69,33 @@
                             <Label text="Fibonacci Generator" rotate="90" styleClass = "tabLabels"/>
                         </Group>
                     </graphic>
-                    <ScrollPane fitToWidth = "true">
-                    <VBox styleClass="tabVBox" fx:id = "fibGenVBox">
+                    <VBox styleClass="tabVBox" id = "fibGenVBox">
                         <Label styleClass="tabtitle" text="Fibonacci Generator"/>
                         <Label styleClass = "funcText" text = "Generate to # " translateX = "20"/>
                         <TextField fx:id = "fibInput" maxWidth = "200" translateX ="20"/>
-                        <Button text="Calculate" styleClass="enterButton" onAction = "#fibGenList" translateY = "0" translateX = "20"/>
-                        <Button text="List" styleClass="enterButton" onAction = "#fibGen" translateY = "0" translateX = "20"/>
-                        <TextArea id = "figGenResult"/>
+                        <Button text="Calculate" styleClass="enterButton" onAction = "#fibGen" translateY = "10" translateX = "20"/>
+                        <Button text="List" styleClass="enterButton" onAction = "#fibGenList" translateY = "-13" translateX = "100"/>
+                        <TextArea fx:id = "fibGenResult" translateX = "20" wrapText = "true" minHeight = "600"/>
                     </VBox>
-                    </ScrollPane>
 
                 </Tab>
 
+                <Tab styleClass = "tabs" closable="false" >
+                    <graphic>
+                        <Group>
+                            <Label text="Primes Generator" rotate="90" styleClass = "tabLabels"/>
+                        </Group>
+                    </graphic>
+                    <ScrollPane fitToWidth = "true">
+                        <VBox styleClass="tabVBox" id = "primeGenVBox">
+                            <Label styleClass="tabtitle" text="Primes Generator"/>
+                            <Label styleClass = "funcText" text = "Generate up to " translateX = "20"/>
+                            <TextField fx:id = "primeInput" maxWidth = "200" translateX ="20"/>
+                            <Button text="Generate" styleClass="enterButton" onAction = "#fibGenList" translateY = "0" translateX = "20"/>
+                            <TextArea fx:id = "primeGenResult" translateX = "20"/>
+                        </VBox>
+                    </ScrollPane>
+                </Tab>
             </tabs>
         </TabPane>
     </left>

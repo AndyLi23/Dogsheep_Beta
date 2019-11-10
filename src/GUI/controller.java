@@ -3,17 +3,19 @@ package GUI;
 import Functions.FibGen;
 import Functions.QuadCalc;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
 
 public class controller {
+    @FXML public TextArea changelog;
+    @FXML public Label changelogUpdater;
+
     //quad calc
-    @FXML public Text quadCalcResult;
+    @FXML public TextArea quadCalcResult;
     @FXML public TextField aText;
     @FXML public TextField bText;
     @FXML public TextField cText;
@@ -21,6 +23,18 @@ public class controller {
     //fib gen
     @FXML public TextArea fibGenResult;
     @FXML public TextField fibInput;
+
+    @FXML public void showChangelog() {
+        changelog.setText("11/3/19: Created main application\n11/4/19: Added tabs, introduction, CSS stylesheet\n11/9/19: New function: quadratic calculator");
+        changelogUpdater.setText("Hide Changelog");
+        changelogUpdater.setOnMouseClicked(event -> hideChangelog());
+    }
+
+    @FXML public void hideChangelog() {
+        changelog.setText("");
+        changelogUpdater.setText("Show Changelog");
+        changelogUpdater.setOnMouseClicked(event -> showChangelog());
+    }
 
     @FXML public void quadCalc() {
         double a = Double.parseDouble(aText.getText());
@@ -35,14 +49,14 @@ public class controller {
         quadCalcResult.setText(ans);
     }
 
-    @FXML public void fibGen() {
+    @FXML public void fibGenList() {
         int a = Integer.parseInt(fibInput.getText());
         FibGen fibGen = new FibGen();
         String ans = fibGen.generateFib(a);
         fibGenResult.setText(ans);
     }
 
-    @FXML public void fibGenList() {
+    @FXML public void fibGen() {
         double a = Double.parseDouble(fibInput.getText());
         FibGen fibGen = new FibGen();
         BigInteger ans = fibGen.getFib(a);
