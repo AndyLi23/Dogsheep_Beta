@@ -72,8 +72,8 @@ public class controller {
     @FXML public void primeGen() {
         double a = Double.parseDouble(primeInput.getText());
         PrimeGen primeGen = new PrimeGen();
-        //String ans = primeGen.generatePrimes(a+1);
-        int ans = primeGen.primeGap(a+1);
+        String ans = primeGen.generatePrimes(a+1);
+        //int ans = primeGen.primeGap(a+1);
         primeGenResult.setText(""+ans);
     }
 }
