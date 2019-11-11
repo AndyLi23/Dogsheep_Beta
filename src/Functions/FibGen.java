@@ -1,12 +1,13 @@
 package Functions;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class FibGen {
     public BigInteger getFib(double num) {
         BigInteger a = new BigInteger("1");
         BigInteger b = new BigInteger("1");
-        for(double i = 2; i < num; i++) {
+        for(double i = 2; i < num+1; i++) {
             if(a.compareTo(b) == 0 || a.compareTo(b) == -1) {
                 a = a.add(b);
             } else {

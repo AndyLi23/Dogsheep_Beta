@@ -1,6 +1,7 @@
 package GUI;
 
 import Functions.FibGen;
+import Functions.PrimeGen;
 import Functions.QuadCalc;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -8,6 +9,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class controller {
@@ -23,6 +25,10 @@ public class controller {
     //fib gen
     @FXML public TextArea fibGenResult;
     @FXML public TextField fibInput;
+
+    //fib gen
+    @FXML public TextField primeInput;
+    @FXML public TextArea primeGenResult;
 
     @FXML public void showChangelog() {
         changelog.setText("11/3/19: Created main application\n11/4/19: Added tabs, introduction, CSS stylesheet\n11/9/19: New function: quadratic calculator");
@@ -61,5 +67,12 @@ public class controller {
         FibGen fibGen = new FibGen();
         BigInteger ans = fibGen.getFib(a);
         fibGenResult.setText(""+ans);
+    }
+
+    @FXML public void primeGen() {
+        double a = Double.parseDouble(primeInput.getText());
+        PrimeGen primeGen = new PrimeGen();
+        String ans = primeGen.generatePrimes(a+1);
+        primeGenResult.setText(ans);
     }
 }
