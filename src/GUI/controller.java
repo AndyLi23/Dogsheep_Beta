@@ -31,7 +31,7 @@ public class controller {
     @FXML public TextArea primeGenResult;
 
     @FXML public void showChangelog() {
-        changelog.setText("11/3/19: Created main application\n11/4/19: Added tabs, introduction, CSS stylesheet\n11/9/19: New function: quadratic calculator");
+        changelog.setText("11/3/19: Created main application\n11/4/19: Added tabs, introduction, CSS stylesheet\n11/9/19: New function: quadratic calculator\n11/10/19: New functions: fibonacci generator, primes generator");
         changelogUpdater.setText("Hide Changelog");
         changelogUpdater.setOnMouseClicked(event -> hideChangelog());
     }
@@ -72,7 +72,8 @@ public class controller {
     @FXML public void primeGen() {
         double a = Double.parseDouble(primeInput.getText());
         PrimeGen primeGen = new PrimeGen();
-        String ans = primeGen.generatePrimes(a+1);
-        primeGenResult.setText(ans);
+        //String ans = primeGen.generatePrimes(a+1);
+        int ans = primeGen.primeGap(a+1);
+        primeGenResult.setText(""+ans);
     }
 }
