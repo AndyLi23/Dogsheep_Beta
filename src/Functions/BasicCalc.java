@@ -21,6 +21,8 @@ public class BasicCalc {
                 res = res / (double) stack.pop();
             } else if (sign == '*'){
                 res = res * (double) stack.pop();
+            } else if (sign == '^') {
+                res = Math.pow(res, (double) stack.pop());
             }
         }
         return res;

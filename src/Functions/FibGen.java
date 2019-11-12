@@ -30,7 +30,7 @@ public class FibGen {
         }
         BigInteger a = new BigInteger("1");
         BigInteger b = new BigInteger("1");
-        for(int i =2; i < num+1; i++) {
+        for(int i =2; i < num; i++) {
             if(a.compareTo(b) == 0 || a.compareTo(b) == -1) {
                 a = a.add(b);
                 ans = ans + (i+1) + ": " + a + "\n";

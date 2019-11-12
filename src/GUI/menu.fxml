@@ -105,7 +105,7 @@
                         <Label styleClass="tabtitle" text="Calculator"/>
                         <TextField fx:id = "calcInput" maxWidth = "400" translateX ="20"/>
                         <Button text="Calculate" styleClass="enterButton" onAction = "#calc" translateY = "10" translateX = "20"/>
-                        <TextArea fx:id = "calc" translateX = "20" translateY = "20" wrapText = "true" minHeight = "600"/>
+                        <TextArea fx:id = "calc" translateX = "20" translateY = "20" wrapText = "true" minHeight = "600" editable = "false"/>
                     </VBox>
 
                 </Tab>

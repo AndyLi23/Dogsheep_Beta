@@ -79,7 +79,7 @@ public class controller {
         PrimeGen primeGen = new PrimeGen();
         String ans = primeGen.generatePrimes(a+1);
         //int ans = primeGen.primeGap(a+1);
-        primeGenResult.setText(""+ans);
+        primeGenResult.setText(ans.replaceFirst(", ", ""));
     }
 
     @FXML public void calc() {
