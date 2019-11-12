@@ -58,7 +58,7 @@
                         <Label styleClass = "funcText" text = "x+" translateX = "168" translateY = "-42"/>
                         <TextField styleClass = "quadCalcInput" fx:id = "cText" maxWidth = "50" translateX ="193" translateY = "-63"/>
                         <Button text="Calculate" styleClass="enterButton" onAction = "#quadCalc" translateY = "-50" translateX = "20"/>
-                        <TextArea fx:id = "quadCalcResult" translateX = "20" translateY = "-30"/>
+                        <TextArea fx:id = "quadCalcResult" translateX = "20" translateY = "-30" editable = "false"/>
                     </VBox>
 
                 </Tab>
@@ -75,7 +75,7 @@
                         <TextField fx:id = "fibInput" maxWidth = "200" translateX ="20"/>
                         <Button text="Calculate" styleClass="enterButton" onAction = "#fibGen" translateY = "10" translateX = "20"/>
                         <Button text="List" styleClass="enterButton" onAction = "#fibGenList" translateY = "-13" translateX = "100"/>
-                        <TextArea fx:id = "fibGenResult" translateX = "20" wrapText = "true" minHeight = "600"/>
+                        <TextArea fx:id = "fibGenResult" translateX = "20" wrapText = "true" minHeight = "600" editable = "false"/>
                     </VBox>
 
                 </Tab>
@@ -86,15 +86,28 @@
                             <Label text="Primes Generator" rotate="90" styleClass = "tabLabels"/>
                         </Group>
                     </graphic>
-                    <ScrollPane fitToWidth = "true">
-                        <VBox styleClass="tabVBox" id = "primeGenVBox">
-                            <Label styleClass="tabtitle" text="Primes Generator"/>
-                            <Label styleClass = "funcText" text = "Generate up to " translateX = "20"/>
-                            <TextField fx:id = "primeInput" maxWidth = "200" translateX ="20"/>
-                            <Button text="Generate" styleClass="enterButton" onAction = "#primeGen" translateY = "10" translateX = "20"/>
-                            <TextArea fx:id = "primeGenResult" translateX = "20" wrapText = "true" minHeight = "600" translateY = "10" />
-                        </VBox>
-                    </ScrollPane>
+                    <VBox styleClass="tabVBox" id = "primeGenVBox">
+                        <Label styleClass="tabtitle" text="Primes Generator"/>
+                        <Label styleClass = "funcText" text = "Generate up to " translateX = "20"/>
+                        <TextField fx:id = "primeInput" maxWidth = "200" translateX ="20"/>
+                        <Button text="Generate" styleClass="enterButton" onAction = "#primeGen" translateY = "10" translateX = "20"/>
+                        <TextArea fx:id = "primeGenResult" translateX = "20" wrapText = "true" minHeight = "600" translateY = "10" editable = "false"/>
+                    </VBox>
+                </Tab>
+
+                <Tab styleClass = "tabs" closable="false" >
+                    <graphic>
+                        <Group>
+                            <Label text="Calculator" rotate="90" styleClass = "tabLabels"/>
+                        </Group>
+                    </graphic>
+                    <VBox styleClass="tabVBox" id = "calcVBox">
+                        <Label styleClass="tabtitle" text="Calculator"/>
+                        <TextField fx:id = "calcInput" maxWidth = "400" translateX ="20"/>
+                        <Button text="Calculate" styleClass="enterButton" onAction = "#calc" translateY = "10" translateX = "20"/>
+                        <TextArea fx:id = "calc" translateX = "20" translateY = "20" wrapText = "true" minHeight = "600"/>
+                    </VBox>
+
                 </Tab>
             </tabs>
         </TabPane>

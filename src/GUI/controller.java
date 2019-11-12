@@ -1,5 +1,6 @@
 package GUI;
 
+import Functions.BasicCalc;
 import Functions.FibGen;
 import Functions.PrimeGen;
 import Functions.QuadCalc;
@@ -26,9 +27,13 @@ public class controller {
     @FXML public TextArea fibGenResult;
     @FXML public TextField fibInput;
 
-    //fib gen
+    //prime gen
     @FXML public TextField primeInput;
     @FXML public TextArea primeGenResult;
+
+    //calc
+    @FXML public TextField calcInput;
+    @FXML public TextArea calc;
 
     @FXML public void showChangelog() {
         changelog.setText("11/3/19: Created main application\n11/4/19: Added tabs, introduction, CSS stylesheet\n11/9/19: New function: quadratic calculator\n11/10/19: New functions: fibonacci generator, primes generator");
@@ -75,5 +80,12 @@ public class controller {
         String ans = primeGen.generatePrimes(a+1);
         //int ans = primeGen.primeGap(a+1);
         primeGenResult.setText(""+ans);
+    }
+
+    @FXML public void calc() {
+        String a = calcInput.getText();
+        BasicCalc basicCalc = new BasicCalc();
+        double ans = basicCalc.calculate(a);
+        calc.setText(""+ans);
     }
 }
