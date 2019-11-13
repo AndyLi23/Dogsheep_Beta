@@ -85,9 +85,9 @@ public class controller {
     @FXML public void calc() {
         String a = calcInput.getText();
         BasicCalc basicCalc = new BasicCalc();
-        //double ans = basicCalc.calculate(a);
         String postfix = basicCalc.postfix(a);
-        calc.setText(postfix);
+        double ans = basicCalc.postfixCalc(postfix);
+        calc.setText(""+ans);
     }
 
 }

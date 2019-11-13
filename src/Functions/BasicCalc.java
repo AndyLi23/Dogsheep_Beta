@@ -56,12 +56,12 @@ public class BasicCalc {
                     stack.push(cur);
                 } else if (cur == ')') {
                     while(!stack.isEmpty() && stack.peek() != '(') {
-                        ans += stack.pop();
+                        ans += stack.pop() + " ";
                     }
                     stack.pop();
                 } else if(!(cur == '.')) {
                     while(!stack.isEmpty() && pref(cur) <= pref(stack.peek())) {
-                        ans += String.valueOf(stack.pop());
+                        ans += stack.pop() + " ";
                     }
                     stack.push(cur);
                 }
@@ -71,12 +71,41 @@ public class BasicCalc {
             ans += operand + " ";
         }
         while(!stack.isEmpty()) {
-            ans += stack.pop();
+            ans += stack.pop() + " ";
         }
         return ans;
     }
 
     public double postfixCalc(String s){
-        return 0;
+        Stack<Object> stack = new Stack<>();
+        String[] sList = s.split(" ");
+        double a, b;
+
+        for(int i =0; i < sList.length; i++) {
+            if(sList[i].equals("*")) {
+                a = (double) stack.pop();
+                b = (double) stack.pop();
+                stack.push(b * a);
+            } else if(sList[i].equals("/")) {
+                a = (double) stack.pop();
+                b = (double) stack.pop();
+                stack.push(b/a);
+            } else if(sList[i].equals("+")) {
+                a = (double) stack.pop();
+                b = (double) stack.pop();
+                stack.push(b+a);
+            } else if(sList[i].equals("-")) {
+                a = (double) stack.pop();
+                b = (double) stack.pop();
+                stack.push(b-a);
+            } else if(sList[i].equals("^")) {
+                a = (double) stack.pop();
+                b = (double) stack.pop();
+                stack.push(Math.pow(b,a));
+            } else {
+                stack.push(Double.parseDouble(sList[i]));
+            }
+        }
+        return (double) stack.pop();
     }
 }
