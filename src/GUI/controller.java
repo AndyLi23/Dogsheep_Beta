@@ -86,7 +86,7 @@ public class controller {
         String a = calcInput.getText();
         BasicCalc basicCalc = new BasicCalc();
         String postfix = basicCalc.postfix(a);
-        double ans = basicCalc.postfixCalc(postfix);
+        BigDecimal ans = basicCalc.postfixCalc(postfix);
         calc.setText(""+ans);
     }
 
