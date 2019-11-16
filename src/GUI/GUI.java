@@ -13,7 +13,7 @@ public class GUI extends Application{
 
 
     public GUI() {
-        System.out.println("~~~~~~~~~~~~~~~~~~~~\nStarting Application\n~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("-~~~~~~~~~~~~~~~~~~~~-\n Starting Application \n-~~~~~~~~~~~~~~~~~~~~-");
     }
 
     @Override

@@ -47,6 +47,21 @@
                 <Tab styleClass = "tabs" closable="false" >
                     <graphic>
                         <Group>
+                            <Label text="Calculator" rotate="90" styleClass = "tabLabels"/>
+                        </Group>
+                    </graphic>
+                    <VBox styleClass="tabVBox" id = "calcVBox">
+                        <Label styleClass="tabtitle" text="Calculator"/>
+                        <TextField fx:id = "calcInput" maxWidth = "400" translateX ="20"/>
+                        <Button text="Calculate" styleClass="enterButton" onAction = "#calc" translateY = "10" translateX = "20"/>
+                        <TextArea fx:id = "calc" translateX = "20" translateY = "20" wrapText = "true" minHeight = "600" editable = "false"/>
+                    </VBox>
+
+                </Tab>
+
+                <Tab styleClass = "tabs" closable="false" >
+                    <graphic>
+                        <Group>
                             <Label text="Quadratic Calculator" rotate="90" styleClass = "tabLabels"/>
                         </Group>
                     </graphic>
@@ -95,20 +110,6 @@
                     </VBox>
                 </Tab>
 
-                <Tab styleClass = "tabs" closable="false" >
-                    <graphic>
-                        <Group>
-                            <Label text="Calculator" rotate="90" styleClass = "tabLabels"/>
-                        </Group>
-                    </graphic>
-                    <VBox styleClass="tabVBox" id = "calcVBox">
-                        <Label styleClass="tabtitle" text="Calculator"/>
-                        <TextField fx:id = "calcInput" maxWidth = "400" translateX ="20"/>
-                        <Button text="Calculate" styleClass="enterButton" onAction = "#calc" translateY = "10" translateX = "20"/>
-                        <TextArea fx:id = "calc" translateX = "20" translateY = "20" wrapText = "true" minHeight = "600" editable = "false"/>
-                    </VBox>
-
-                </Tab>
             </tabs>
         </TabPane>
     </left>

@@ -99,7 +99,7 @@ public class BasicCalc {
             } else if(sList[i].equals("/")) {
                 a = (BigDecimal)  stack.pop();
                 b = (BigDecimal)  stack.pop();
-                stack.push(b.divide(a));
+                stack.push(BigDecimal.valueOf(b.doubleValue()/a.doubleValue()));
             } else if(sList[i].equals("+")) {
                 a = (BigDecimal)  stack.pop();
                 b = (BigDecimal)  stack.pop();
@@ -111,7 +111,7 @@ public class BasicCalc {
             } else if(sList[i].equals("^")) {
                 a = (BigDecimal) stack.pop();
                 b = (BigDecimal) stack.pop();
-                stack.push(b.pow(a.intValue()));
+                stack.push(BigDecimal.valueOf(Math.pow(b.doubleValue(),a.doubleValue())));
             } else {
                 stack.push(BigDecimal.valueOf(Double.parseDouble(sList[i])));
             }

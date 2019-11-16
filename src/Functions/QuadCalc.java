@@ -81,8 +81,14 @@ public class QuadCalc {
         double[] g = gcf(-1*coef[1],e[0],2*coef[0]);
 
         if (g[1] == 1 || g[1] == -1) {
+            if (g[2] == 1) {
+                return (int)(g[0]) + "±√" + (int)(e[1]);
+            }
             return "(" + (int)(g[0]) + "±√" + (int)(e[1]) + ")/" + (int)(g[2]);
         } else {
+            if (g[2] == 1) {
+                return (int)(g[0]) + "±" + (int)(g[1]) + "√" + (int)(e[1]);
+            }
             return "(" + (int)(g[0]) + "±" + (int)(g[1]) + "√" + (int)(e[1]) + ")/" + (int)(g[2]);
         }
 
